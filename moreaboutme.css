@@ -1,0 +1,143 @@
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+}
+
+#about h2, #about p, #about button {
+    max-width: 65%; /* Limit the width of the content */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+#about h2 {
+    margin-bottom: 50px; /* Add more space below the heading */
+}
+
+#about p {
+    margin-bottom: 50px; /* Add more space between paragraphs */
+}
+
+.more-btn {
+    padding: 10px 10px;
+    margin-top: 30px; /* Add more space above the button */
+    background-color: #ffffff;
+    color: #395451;
+    border: none; /* Remove the border */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 90%;
+    font-weight: 600;
+    cursor: pointer; /* Make it clickable */
+}
+
+.more-btn:hover {
+  background-color: #136d52;
+  color: white;
+    
+}
+
+.arrow-2 {
+    position: absolute;
+    animation: float 3s infinite ease-in-out; /* Smooth up-and-down movement */
+    position: absolute;
+    bottom: 0; /* Aligns at the bottom */
+    left:50%; /* Moves horizontally to the middle */
+    top: 189vh;
+    transform: translateX(-50%); /* Centers horizontally */
+    padding: 20px;
+    text-align: center;
+    height: 100px;
+    width: 100px;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); /* Moves 20px up */
+    }
+  }
+
+
+
+  
+
+
+  /* Responsive Styles for #about Section */
+
+/* For laptops and larger tablets (screen width up to 1200px) */
+@media (max-width: 1200px) {
+  #about {
+      font-size: 1.3rem; /* Slightly reduce the font size */
+      padding: 15px; /* Adjust padding */
+  }
+
+  #about h2 {
+      margin-bottom: 40px; /* Adjust spacing below the heading */
+  }
+
+  #about p {
+      margin-bottom: 40px; /* Adjust spacing between paragraphs */
+  }
+
+  .more-btn {
+      font-size: 85%; /* Reduce button text size */
+      padding: 8px 8px; /* Adjust button padding */
+  }
+}
+
+/* For tablets (screen width up to 768px) */
+@media (max-width: 768px) {
+  #about {
+      font-size: 1.2rem; /* Further reduce the font size */
+      padding: 10px; /* Reduce padding */
+  }
+
+  #about h2, #about p, #about button {
+      max-width: 85%; /* Increase content width */
+  }
+
+  .more-btn {
+      font-size: 80%; /* Smaller button text */
+      padding: 6px 8px; /* Adjust button padding */
+  }
+
+ 
+}
+
+/* For phones (screen width up to 480px) */
+@media (max-width: 480px) {
+  #about {
+      font-size: 1rem; /* Reduce font size further */
+      padding: 5px; /* Minimal padding */
+      text-align: center; /* Ensure center alignment */
+  }
+
+  #about h2 {
+      font-size: 1.5rem; /* Smaller heading size */
+      margin-bottom: 30px; /* Adjust spacing */
+  }
+
+  #about p {
+      font-size: 1rem; /* Smaller paragraph size */
+      margin-bottom: 20px; /* Adjust spacing */
+  }
+
+  .more-btn {
+      font-size: 70%; /* Reduce button text size further */
+      padding: 5px 7px; /* Adjust button padding */
+  }
+
+  .arrow-2 {
+      bottom: 10px; /* Bring the arrow closer to the bottom */
+      top: auto; /* Reset top property */
+      height: 80px; /* Reduce arrow size */
+      width: 80px; /* Reduce arrow size */
+  }
+}

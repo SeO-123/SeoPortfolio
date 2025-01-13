@@ -1,0 +1,158 @@
+#designs {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    background-color: #1d2d35; /* Dark theme */
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    overflow: visible; /* Ensure no clipping of children */
+  }
+  
+  #designs h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+  }
+  
+  #designs .cards-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between cards */
+    overflow: visible; /* Allow hover effects to expand beyond container */
+    padding-bottom: 10px; /* Space for the buttons */
+    width: 90%; /* Make the container take full width */
+  }
+  
+  #designs .card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 200px;
+    height: 300px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+  }
+  
+  #designs .card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and scale effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow for depth */
+    z-index: 10; /* Ensure the card is above other elements */
+  }
+  
+  #designs .card img {
+    width: 80%; /* Adjust the image size as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: auto; /* Ensure space between the image and text */
+  }
+  
+  #designs .card h2 {
+    margin-top: auto; /* Push text to the bottom */
+    color: #1d2d35;
+    font-size: 18px;
+  }
+  .cards-container a {
+    text-decoration: none;
+  }
+  
+  #designs .more-designs {
+    position: absolute;
+    top: 75%; /* Move the button closer to the cards */
+    left: 50%;
+    transform: translateX(-50%);
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #395451;
+    margin: 0px;
+    cursor: pointer;
+    padding: 10px 10px;
+    color: #395451;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    font-size: 90%;
+    font-weight: 600;
+  }
+  
+  #designs .more-designs:hover {
+    background-color: #136d52;
+    color: white;
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) { /* Laptop */
+    #designs h1 {
+      font-size: 30px;
+    }
+  
+    #designs .cards-container {
+      gap: 20px;
+    }
+  
+    #designs .card {
+      width: 180px;
+      height: 270px;
+    }
+  
+    #designs .more-designs {
+      font-size: 85%; /* Reduce button text size */
+      padding: 8px 8px; /* Adjust button padding */
+    }
+  }
+  
+  @media (max-width: 768px) { /* Tablet */
+    #designs h1 {
+      font-size: 26px;
+    }
+  
+    #designs .cards-container {
+      gap: 20px;
+    }
+  
+    #designs .card {
+      width: 80%;
+      height: auto;
+    }
+  
+    #designs .more-designs {
+      font-size: 80%; /* Smaller button text */
+      padding: 6px 8px; /* Adjust button padding */
+    }
+  }
+  
+  @media (max-width: 480px) { /* Phone */
+    #designs h1 {
+      font-size: 24px;
+    }
+  
+    #designs .cards-container {
+      gap: 15px;
+    }
+  
+    #designs .card {
+      width: 90%;
+      height: auto;
+    }
+  
+    #designs .more-designs {
+      font-size: 70%; /* Reduce button text size further */
+      padding: 5px 7px; /* Adjust button padding */
+    }
+  }
+
+  
+  section {
+    background: radial-gradient(circle, #0B4A51, #2A3838);
+}

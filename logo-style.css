@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: auto;
+  flex-direction: column;
+  align-items: center;
+  background-color: radial-gradient(circle, #0B4A51, #2A3838)#f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #ffffff;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the number of columns */
+  gap: 16px; /* Space between images */
+  padding: 20px;
+  max-width: 1200px; /* Optional: Limit the width */
+  margin: 0 auto; /* Center the gallery horizontally */
+  justify-content: center; /* Center grid items horizontally */
+  align-items: center; /* Center grid items vertically */
+}
+
+/* Media query for small screens (tablets and phones) */
+@media (max-width: 768px) {
+  .gallery {
+      grid-template-columns: 1fr; /* Display items in a single column */
+  }
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth; 
+}

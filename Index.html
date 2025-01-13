@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefano's Portofolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./loader.css">
+    
+</head>
+<body>
+  
+  <div class="loader"></div> <!-- Your loader -->
+  <div id="content" style="display: none;">
+    <div class="navbar">
+      <a href="" class="name">Stefano Mano</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#designs">Designs/Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </div>
+
+     <!-- Home Section -->
+     <section id="home" class="slide">
+        <!-- Left Side Content -->
+        <div class="left-side">
+            <h1 class="text1">Hello, I’m Stefano (Seo) 
+              <img src="./images/hello.png" alt="Hello" class="hello-image"> </h1>
+            <h1 class="text3">Graphic Designer</h1>
+            <p class="text2">
+                I am a passionate graphic designer with over two years of experience,<br>
+                specializing in Adobe Illustrator and Photoshop.
+            </p>
+            <div class="buttons">
+                <a href="#contact">Contact Me</a>
+                <a href="./my CV/Stefano Mano CV (2).pdf" download="Stefano Mano CV">Download CV</a>
+
+            </div>
+        </div>
+    
+        <!-- Right Side Content -->
+        <div class="right-side">
+            <img src="./images/profpic2.png" alt="Profile Image" class="profile-image">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/stefano-mano-26005a336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" title="LinkedIn" target="_blank">
+                  <img src="./images/social.png" alt="LinkedIn" width="40">
+                </a>
+                <a href="https://www.fiverr.com/s/EgozAB8?utm_source=CopyLink_Mobile" title="Fiverr" target="_blank">
+                  <img src="./images/fiverr.png" alt="Fiverr" width="40">
+                </a>
+                <a href="https://www.instagram.com/manos.stefanos?igsh=N2pxNDU1bzV6aWxt&utm_source=qr" title="Instagram" target="_blank">
+                  <img src="./images/instagram.png" alt="Instagram" width="40">
+                </a>
+                <a href="https://pin.it/RJYBMn5LT" title="Pinterest" target="_blank">
+                  <img src="./images/pinterest.png" alt="Pinterest" width="40">
+                </a>
+              </div> 
+        </div>
+    </section>
+    <div style="margin-top: -130px; display: flex; justify-content: center;">
+    <a href="#about">
+      <img src="./images/arrow.png" alt="Floating Photo" class="arrow" >
+    </a>
+  </div>
+
+    <!-- About Section -->
+    <section id="about" class="slide">
+        <h2>About me</h2>
+        <p>
+          I am a passionate graphic designer with over two years of experience, specializing in Adobe Illustrator and Photoshop. 
+          My creativity and problem-solving skills enable me to transform complex ideas into visually captivating designs. 
+          One of my work projects was an NFT collection named Aliens, featuring 10 unique, custom-designed alien figures that 
+          reflected my ability to turn imaginative concepts into compelling visuals.
+          I also specialize in webpage design and have created a variety of different web pages. Dedicated to pushing creative 
+          boundaries, I thrive on collaborating with clients to bring their visions to life and aim to develop my signature 
+          style as I establish myself as a leading figure in the graphic design world.
+        </p>
+        <a href="./moreabme.html" class="more-btn" style="text-decoration: none;">More about me</a>
+    </section>
+    <div style="margin-top: -130px; display: flex; justify-content: center;">
+      <a href="#designs">
+        <img src="./images/arrow.png" alt="Floating Photo" class="arrow" >
+      </a>
+    </div>
+
+    <!-- Designs Section -->
+    <section id="designs" class="slide">
+        <h1>Projects/Designs</h1>
+        <div class="cards-container">
+          <a href="./logos.html" class="card">
+            <img src="./images/SC LOGO.png" alt="Logo Design">
+            <h2>Logos</h2>
+          </a>
+          <a href="./nfts.html" class="card">
+            <img src="./nfts/alien classic 1.png" alt="NFT Design">
+            <h2>NFT's</h2>
+          </a>
+          <a href="./websites.html" class="card">
+            <img src="./websites/coming soon.png" alt="Website Design">
+            <h2>Website Designs</h2>
+          </a>
+        </div>
+        <a href="./moredesigns.html" class="more-designs" style="text-decoration: none;" >More Designs</button> 
+      </section>
+      <div style="margin-top: -130px; display: flex; justify-content: center;">
+        <a href="#contact">
+          <img src="./images/arrow.png" alt="Floating Photo" class="arrow" >
+        </a>
+      </div>
+
+      
+
+    <!-- Contact Section -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("PBg5sCIjuTCeKlZMd"); // Replace "YOUR_PUBLIC_KEY" with your actual Email.js Public Key
+      })();
+    </script>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <section id="contact" class="slide">
+      <h1>Contact Me</h1>
+      <div class="form-container">
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+          
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+      
+
+    <footer>
+        <p>&copy; 2025 Stefano Mano. All Rights Reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.navbar ul');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+      </div>
+      <script src="./loader.js" defer></script>
+    
+    
+</body>
+</html>
